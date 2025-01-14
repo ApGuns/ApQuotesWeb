@@ -1,0 +1,341 @@
+/* Reset styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* Header Navigation */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  background-color: #1e88e5;
+  color: white;
+  height: 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.site-header .header-links {
+  display: flex;
+  gap: 20px;
+}
+
+.site-header .header-links a {
+  color: white;
+  text-decoration: none;
+}
+
+.site-header .header-links.desktop-only {
+  display: flex;
+}
+
+.site-header .header-right {
+  display: none;
+}
+
+/* Sidebar */
+.sidepanel {
+  width: 0;
+  position: fixed;
+  z-index: 2000;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background-color: #1e88e5;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidepanel a {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidepanel a:hover {
+  color: #bbdefb;
+}
+
+.sidepanel .closebtn {
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  font-size: 36px;
+  color: white;
+}
+
+#mySidepanel.open {
+  width: 250px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .site-header .header-links.desktop-only {
+      display: none;
+  }
+
+  .site-header .header-right {
+      display: block;
+  }
+
+  .sidepanel {
+      width: 0;
+  }
+}
+
+  .logo {
+      color: white;
+      text-decoration: none; /* Hilangkan garis bawah */
+  }
+
+  .logo:hover,
+  .logo:focus,
+  .logo:active {
+      color: white; /* Tetap putih saat di-hover, fokus, atau diklik */
+  }
+
+  /* Main Content */
+  main {
+    padding: 20px;
+    background-color: #e3f2fd; /* Biru muda */
+    min-height: 80vh;
+  }
+  
+  /* Grid Layout for Posts */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+  }
+  
+  .grid-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .grid-item h3 {
+    margin: 0 0 10px;
+    color: #333;
+  }
+  
+
+.grid-item p:first-of-type {
+  text-align: center; /* Rata tengah untuk teks quotes */
+  font-style: italic; /* Opsional: menambahkan gaya miring */
+}
+
+.grid-item p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+  }
+  
+  .inspirational-message {
+    background-color: #e3f2fd; /* Biru muda */
+    border-left: 5px solid #42a5f5; /* Garis biru di sebelah kiri */
+    border-right: 5px solid #42a5f5; /* Garis biru di sebelah kiri */
+    padding: 15px;
+    margin: 20px auto; /* Margin otomatis untuk menyesuaikan di tengah */
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333; /* Teks abu gelap */
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Teks berada di tengah */
+    max-width: 800px; /* Lebar maksimal elemen */
+}
+
+
+
+/* Post Actions */
+.post-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .like-btn, .comment-btn {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+  }
+  
+  .like-btn:hover, .comment-btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* Komentar Section */
+  .comments-section {
+    margin-top: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    display: none;
+  }
+  
+  .comments-section.hidden {
+    display: none;
+  }
+  
+  .hidden {
+    display: none;
+}
+
+  .comments-section textarea {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+  }
+  
+  .comments-section .submit-comment {
+    background-color: #42a5f5;
+    color: white;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .comments-section .submit-comment:hover {
+    background-color: #2196f3;
+  }
+  /* Footer */
+  .site-footer {
+    background-color: #1565c0;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .site-footer a {
+    color: #bbdefb;
+    text-decoration: none;
+  }
+  
+  .site-footer a:hover {
+    text-decoration: underline;
+  }
+  
+
+  /* Style untuk Halaman Login dan Register */
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.container h2 {
+    text-align: center;
+    color: #1e88e5;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.container form div {
+    display: flex;
+    flex-direction: column;
+}
+
+.container form label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.container form input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+}
+
+.container form input:focus {
+    border-color: #1e88e5;
+    box-shadow: 0 0 5px rgba(30, 136, 229, 0.5);
+}
+
+.container button {
+    background-color: #1e88e5;
+    color: white;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container button:hover {
+    background-color: #1565c0;
+}
+
+.container .toggle {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container .toggle p {
+    font-size: 14px;
+    color: #555;
+}
+
+.container .toggle a {
+    color: #1e88e5;
+    text-decoration: none;
+}
+
+.container .toggle a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+
+    .container h2 {
+        font-size: 20px;
+    }
+
+    .container button {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
